@@ -10,7 +10,7 @@ def get_latest_tag_aseprite():
 	response_json = response.json()
 
 	for release in response_json:
-		if 'b' not in release['tag_name'].lower():
+		if 'k' not in release['tag_name'].lower():
 			return release['tag_name']
 
 	return None
