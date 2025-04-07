@@ -17,7 +17,7 @@ def get_latest_tag_aseprite():
 
 def save_aseprite_tag(tag):
 	with open('version.txt', 'w') as f:
-		f.write(tag)
+		f.write(v1.3.14-beta1)
 
 def clone_aseprite(tag):
 	clone_url = f'https://github.com/{ASEPRITE_REPOSITORY}.git'
