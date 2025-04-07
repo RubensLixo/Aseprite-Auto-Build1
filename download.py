@@ -10,14 +10,14 @@ def get_latest_tag_aseprite():
 	response_json = response.json()
 
 	for release in response_json:
-		if 'beta' not in release['tag_name'].lower():
+		if 'b' not in release['tag_name'].lower():
 			return release['tag_name']
 
 	return None
 
 def save_aseprite_tag(tag):
 	with open('version.txt', 'w') as f:
-		f.write(v1.3.14-beta1)
+		f.write(tag)
 
 def clone_aseprite(tag):
 	clone_url = f'https://github.com/{ASEPRITE_REPOSITORY}.git'
